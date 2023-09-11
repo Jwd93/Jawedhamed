@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jawed Hamed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue sur mon portfolio</h1>
+        <p>Je m’appelle Jawed Hamed et je suis actuellement étudiant en BTS SIO (Services Informatiques aux Organisations) spécialité SLAM (Solutions Logicielles et Applications Métiers).</p>
+        <p>Bienvenue sur mon portfolio où vous pourrez découvrir mes compétences, mes projets, mes stages et ma veille technologique.</p>
+
+        <ul class="tabs">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#stages">Stages</a></li>
+            <li><a href="#veille">Veille Technologique</a></li>
+        </ul>
+
+        <div id="accueil" class="tab-content active-tab">
+            <h2>Accueil</h2>
+            <p>Je m’appelle Jawed Hamed et je suis actuellement étudiant en BTS SIO (Services Informatiques aux Organisations) spécialité SLAM (Solutions Logicielles et Applications Métiers). Je suis passionné par le développement web et les nouvelles technologies.</p>
+        </div>
+
+        <div id="cv" class="tab-content">
+            <h2>CV</h2>
+            <p>Téléchargez mon CV pour en savoir plus sur mon parcours académique et mes compétences.</p>
+            <!-- Ajoutez ici un lien vers votre CV -->
+        </div>
+
+        <div id="projets" class="tab-content">
+            <h2>Projets</h2>
+            <p>Découvrez les différents projets sur lesquels j'ai travaillé.</p>
+            <!-- Ajoutez ici vos projets -->
+        </div>
+
+        <div id="stages" class="tab-content">
+            <h2>Stages</h2>
+            <p>Consultez les informations sur mes stages en entreprise.</p>
+            <!-- Ajoutez ici les détails de vos stages -->
+        </div>
+
+        <div id="veille" class="tab-content">
+            <h2>Veille Technologique</h2>
+            <p>Restez à jour avec les dernières avancées technologiques dans le domaine de l'informatique.</p>
+            <!-- Ajoutez ici vos informations sur la veille technologique -->
+        </div>
+    </div>
+
+    <script>
+        // Gestion des onglets
+        var tabs = document.querySelectorAll('.tabs li a');
+        var tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = this.getAttribute('href').slice(1);
+
+                tabs.forEach(function(tab) {
+                    tab.classList.remove('active');
+                });
+
+                tabContents.forEach(function(tabContent) {
+                    tabContent.classList.remove('active-tab');
+                });
+
+                this.classList.add('active');
+                document.getElementById(target).classList.add('active-tab');
+            });
+        });
+    </script>
+</body>
+</html>
+
