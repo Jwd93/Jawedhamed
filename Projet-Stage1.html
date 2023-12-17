@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+     /*Parametre pour le petit texte qui apparait quand on met la souris sur Role et Num poste (J-)*/
+    .tooltip{position:relative;display:inline-block;cursor:pointer}.tooltip .tooltiptext{visibility:hidden;width:120px;background-color:#333;color:#fff;text-align:center;border-radius:6px;padding:5px;position:absolute;z-index:1;bottom:125%;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .3s}.tooltip:hover .tooltiptext{visibility:visible;opacity:1}
+  </style>
+  
+  <title>Formulaire de la nouvelle nomenclature</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    select,
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .summary {
+      border: 1px solid #333333;
+      padding: 10px;
+      margin-top: 30px;
+      background-color: #ffffff;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Ajout des styles pour améliorer le rendu visuel (-A-)*/
+
+    body {
+      background-image: url("https://upload.wikimedia.org/wikipedia/fr/thumb/8/84/Logo_La_Courneuve.svg/768px-Logo_La_Courneuve.svg.png?20190622230023");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 350px;
+    }
+    /*Toutes les informations, parametres des Services , Lieu & Vlan , Role  , Num poste et Responsable (-W-)*/
+    
+    /* Tout en bas y'a les fonction qui gere les abreviations et l'affichage dynamique  (-ED)*/
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulaire de la nouvelle nomenclature</h1>
+    <form id="form">
+      <fieldset>
+        <legend>Service :</legend>
+        <select id="services" required>
+          <option value="">Selectionnez un service</option>
+          <option value="D G S">Directeurs generaux des services</option>
+          <option value="D G ">Directeurs generaux</option>
+          <option value="C O M">Communication</option>
+          <option value="Evenement protocole">Evenement et protocole</option>
+          <option value="Assistance  direction">Assistance de direction</option>
+          <option value="Innovation  prospective">Innovation et prospective</option>
+          <option value="Administration finances">Administration et finances</option>
+          <option value="B A T">Batiments</option>
+          <option value="L O G">Logistique</option>
+          <option value="H A B">Habitat</option>
+          <option value="Enfances Jeunesse">Enfances et Jeunesse</option>
+          <option value="Education">Education</option>
+          <option value="S P O">Sport et vie associative</option>
+          <option value="Petite enfance">Petite enfance</option>
+          <option value="C U L">Art et culture</option>
+          <option value="Démocratie participative">Democratie participative</option>
+          <option value="Accueil qualité relation aux usagers">Accueil qualite de la relation aux usagers</option>
+          <option value="Développement urbain Logement">Developpement urbain et du logement</option>
+          <option value="S A N">Sante</option>
+          <option value="S O L">Solidarite</option>
+          <option value="P R E">Prevention</option>
+          <option value="Ressources humaines">Ressources humaines et dialogue social</option>
+          <option value="F I N">Finance commande publique</option>
+          <option value="J U R">Affaires generales et juridiques</option>
+          <option value="Systèmes informations">Systemes d'informations</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Lieu & Vlan:</legend>
+        <select id="Vlan" required>
+          <option value="">Selectionnez le lieu ou le Vlan</option>
+          <option value="93">Journal Regards | 93</option>
+          <option value="92">Communication | 92 </option>
+          <option value="92">Prevention - PM | 92</option>
+          <option value="8">Wallon - Langevin | 8</option>
+          <option value="20">GS Rosenberg | 20</option>
+          <option value="96">Lennon - Houdremont | 96</option>
+          <option value="4">GS Josephine Baker | 4</option>
+          <option value="10">Ecole Chaplin | 10</option>
+          <option value="14">GS Joliot Curie | 14</option>
+          <option value="62">Maison des 4 routes | 62</option>
+          <option value="22">Ecole St Exupery | 22</option>
+          <option value="91">Maison de la Justice | 91</option>
+          <option value="96">Ancien CMS | 96</option>
+          <option value="54">Edgar Quinet | 54</option>
+          <option value="24">Ancien Cinema | 24</option>
+          <option value="60">Evora | 60</option>
+          <option value="92">CMS | 92</option>
+          <option value="91">Hotel de Ville | 91</option>
+          <option value="98">Hotel de Ville | 98</option>
+          <option value="6">GS Robespierre - Valles | 6</option>
+          <option value="2">Ecole Louise Michel | 2</option>
+          <option value="2">Gymnase | 2</option>
+          <option value="94">Mecano | 94</option>
+          <option value="93">Maison Citoyennete | 93</option>
+          <option value="93">CASC | 93</option>
+          <option value="36">Marcel Paul | 36</option>
+          <option value="18">Raymond Poincare | 18</option>
+          <option value="56">Communication 91 Republique | 56</option>
+          <option value="40">Halte Garderie | 40</option>
+          <option value="16">GS Paul Doumer | 16</option>
+          <option value="93">Centre Administratif | 93</option>
+          <option value="94">Centre Administratif | 94</option>
+          <option value="93">Sports/Jeunesse/Archives | 93</option>
+          <option value="58">Ecole Angela Davis | 58</option>
+          <option value="1000">CTM | 1000</option>
+          <option value="93">Bourse du Travail | 93</option>
+          <option value="73">Marche | 73</option>
+          <option value="44">Stade-Geo Andre | 44</option>
+          <option value="12">GS A.France / MPT Y.Gagarine | 12</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+         <p><span class="tooltip"><legend>Role :</legend><span class="tooltiptext">Astuce: Mettre seulement les mots, sans article et determinant </span></span> </p>
+        
+        <input type="text" id="role" required>
+      </fieldset>
+
+      <fieldset>
+        <p><span class="tooltip"><legend>Numero de poste :</legend><span class="tooltiptext">01-999</span></span> </p>
+        
+        <input type="text" id="poste" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Responsable :</legend>
+        <input type="checkbox" id="responsable">
+      </fieldset>
+    </form>
+
+    <div id="summary" class="summary" style="display: none;"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const servicesSelect = document.getElementById('services');
+    const VlanSelect = document.getElementById('Vlan');
+    const roleInput = document.getElementById('role');
+    const posteInput = document.getElementById('poste');
+    const responsableInput = document.getElementById('responsable');
+    const summaryDiv = document.getElementById('summary');
+
+    function getAbbreviation(value) {
+      const words = value.split(' ');
+      const abbreviation = words.map(word => word.substring(0, 1).toUpperCase()).join('');
+      return abbreviation.substring(0, 3);
+    }
+
+    function updateSummary() {
+      const serviceValue = servicesSelect.value;
+      const VlanValue = VlanSelect.value;
+      const roleValue = roleInput.value;
+      const posteValue = posteInput.value;
+      const responsableValue = responsableInput.checked ? 'R' : '';
+
+      const serviceAbbreviation = getAbbreviation(serviceValue);
+      const VlanAbbreviation = VlanValue ? VlanValue.substring(0, 2) : '';
+      const roleAbbreviation = getAbbreviation(roleValue);
+
+      const summary = `Nomenclature :     ${serviceAbbreviation}${VlanAbbreviation}${roleAbbreviation}${posteValue}${responsableValue}`;
+
+      summaryDiv.innerHTML = summary;
+      summaryDiv.style.display = 'block';
+    }
+
+    form.addEventListener('input', updateSummary);
+  </script>
+</body>
+</html>
+
+<head>
+ 
+</head>
+<body>
+ 
+
+</body>
+</html>
