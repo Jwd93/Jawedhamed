@@ -170,8 +170,8 @@ header {
 .heading {
     font-size: 2.5rem;
    text-decoration: linear-gradient(90deg, rgb(1, 36, 0) 0%, rgb(9, 121, 9) 0%, rrgb(26, 144, 8)0%, rrgb(68, 142, 8)0%, rgb(123, 255, 0) 100%);
-   background:rgb(255, 255, 255);
-   color: black;
+  
+   color: rgb(255, 254, 254);
 
 }
 
