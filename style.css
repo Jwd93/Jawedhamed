@@ -235,5 +235,21 @@ header {
 .projet:hover {
     background-color: rgb(37, 170, 99);
 }
+.projet1 {
+    width: 200px;
+    height: 100px;
+    background-color: #119445;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.projet1:hover {
+    background-color: rgb(37, 170, 99);
+}
+}
+
 
